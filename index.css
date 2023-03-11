@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  /* color: #b6b6b6;
+  background-color: #23232e; */
+}
+
+body {
+  color: #191921;
+  background-color: #fffa;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+body::-webkit-scrollbar {
+  width: 0.8rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: black;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #164a41;
+}
+main {
+  margin-left: 5rem;
+  padding: 1rem;
+}
+
+.navbar {
+  width: 5rem;
+  height: 100vh;
+  position: fixed;
+  background-color: black;
+  transition: width 200ms ease;
+}
+
+.navbar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+  gap: 1rem;
+}
+
+.navbar-nav div {
+  background-color: #164a41;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.navbar-link {
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  text-decoration: none;
+}
+
+.link-text {
+  display: none;
+  margin-left: 1rem;
+  color: white;
+}
+
+.navbar:hover {
+  width: 16rem;
+}
+
+.navbar:hover .link-text {
+  display: block;
+}
+
+.link-text:hover {
+  color: black;
+}
+
+.analysis-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+
+}
+
+.analysis-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 304px;
+  padding: 8px 16px 0px;
+  box-shadow: rgb(0 0 0 / 10%) 0px 2px 4px 0px, rgb(0 0 0 / 5%) 0px 1px 2px 0px;
+  border-radius: 8px;
+  background-color: white;
+  width: 472px;
+}
+
+textarea {
+  resize: none;
+  border: 1px solid white;
+  border-radius: 20px;
+  padding: 20px;
+  width: 95vw;
+  height: 50vh;
+  outline: none;
+  box-shadow: rgb(0 0 0 / 10%) 0px 2px 4px 0px, rgb(0 0 0 / 5%) 0px 1px 2px 0px;
+ 
+}
+
+.record-button {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus,
+.btn-primary:visited {
+  background-color: white !important;
+  border: white;
+  color: #164a41;
+  box-shadow: rgb(0 0 0 / 10%) 0px 2px 4px 0px, rgb(0 0 0 / 5%) 0px 1px 2px 0px;
+  font-size: larger;
+}
+
+.btn-primary:hover {
+  background-color: #164a41 !important;
+  border: #164a41;
+  color: white;
+}
+
+.btn {
+  padding: 20px 40px;
+  border-radius: 10px;
+}
