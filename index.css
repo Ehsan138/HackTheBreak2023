@@ -155,6 +155,9 @@ p {
   white-space: pre-wrap;
   font-size: 1.2rem;
   background-color: #fff;
+   box-shadow: rgb(0 0 0 / 10%) 0px 2px 4px 0px, rgb(0 0 0 / 5%) 0px 1px 2px 0px;
+   border-radius: 20px;
+  padding: 20px;
 }
 
 #response {
@@ -165,11 +168,15 @@ p {
   white-space: pre-wrap;
   font-size: 1.2rem;
   background-color: #fff;
+   box-shadow: rgb(0 0 0 / 10%) 0px 2px 4px 0px, rgb(0 0 0 / 5%) 0px 1px 2px 0px;
+   border-radius: 20px;
+  padding: 20px;
 }
 
 #buttons {
   text-align: center;
   margin-top: 2rem;
+  
 }
 
 button {
@@ -211,5 +218,6 @@ button:disabled {
 
   button {
     font-size: 1rem;
+    
   }
 }
