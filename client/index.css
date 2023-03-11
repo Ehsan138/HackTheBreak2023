@@ -85,8 +85,6 @@ main {
   color: black;
 }
 
-
-
 textarea {
   resize: none;
   border: 1px solid white;
@@ -96,13 +94,12 @@ textarea {
   height: 50vh;
   outline: none;
   box-shadow: rgb(0 0 0 / 10%) 0px 2px 4px 0px, rgb(0 0 0 / 5%) 0px 1px 2px 0px;
- 
 }
 
 .record-button {
-    display: flex;
-    justify-content: center;
-    padding: 50px;
+  display: flex;
+  justify-content: center;
+  padding: 50px;
 }
 
 .btn-primary,
@@ -118,27 +115,15 @@ textarea {
 }
 
 .btn-primary:hover {
-  background-color: #35824E !important;
+  background-color: #35824e !important;
   border: #164a41;
   color: white;
-  
 }
 
 .btn {
   padding: 20px 40px;
   border-radius: 10px;
-  
 }
-
-
-
-
-
-
-
-
-
-
 
 p {
   text-align: center;
@@ -155,8 +140,8 @@ p {
   white-space: pre-wrap;
   font-size: 1.2rem;
   background-color: #fff;
-   box-shadow: rgb(0 0 0 / 10%) 0px 2px 4px 0px, rgb(0 0 0 / 5%) 0px 1px 2px 0px;
-   border-radius: 20px;
+  box-shadow: rgb(0 0 0 / 10%) 0px 2px 4px 0px, rgb(0 0 0 / 5%) 0px 1px 2px 0px;
+  border-radius: 20px;
   padding: 20px;
 }
 
@@ -168,15 +153,14 @@ p {
   white-space: pre-wrap;
   font-size: 1.2rem;
   background-color: #fff;
-   box-shadow: rgb(0 0 0 / 10%) 0px 2px 4px 0px, rgb(0 0 0 / 5%) 0px 1px 2px 0px;
-   border-radius: 20px;
+  box-shadow: rgb(0 0 0 / 10%) 0px 2px 4px 0px, rgb(0 0 0 / 5%) 0px 1px 2px 0px;
+  border-radius: 20px;
   padding: 20px;
 }
 
 #buttons {
   text-align: center;
   margin-top: 2rem;
-  
 }
 
 button {
@@ -218,6 +202,5 @@ button:disabled {
 
   button {
     font-size: 1rem;
-    
   }
 }
