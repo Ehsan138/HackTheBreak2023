@@ -145,3 +145,87 @@ textarea {
   padding: 20px 40px;
   border-radius: 10px;
 }
+
+
+
+
+
+
+
+
+
+
+
+p {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+#transcription {
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  min-height: 100px;
+  white-space: pre-wrap;
+  font-size: 1.2rem;
+  background-color: #fff;
+}
+
+#response {
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  min-height: 100px;
+  white-space: pre-wrap;
+  font-size: 1.2rem;
+  background-color: #fff;
+}
+
+#buttons {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+button {
+  padding: 0.8rem 1.5rem;
+  font-size: 1.2rem;
+  margin: 0 0.5rem;
+  border-radius: 1rem;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #0069d9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  #transcription,
+  #response {
+    font-size: 1rem;
+  }
+
+  button {
+    font-size: 1rem;
+  }
+}
