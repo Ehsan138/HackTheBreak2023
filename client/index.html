@@ -37,7 +37,7 @@
     </nav>
 
     <main>
-      <div class="left">
+
       <h1 style="font-weight: 430; margin-bottom: 2px">Nail Your Next Interview!</h1>
       <div id="app">
         <p style="text-align: center">
@@ -49,31 +49,37 @@
         </p>
         <br>
         <div id="chat_container"></div>
-
-        <form>
-          <textarea name="prompt" rows="1" cols="1" placeholder="Ask PrepBot..."></textarea>
-          <div class="record-button">
-            <button type="submit"> SUBMIT
-              <button type="submit" id="next-question-button"> NEXT QUESTION
+        <button type="submit" id="next-question-button"> NEXT QUESTION </button>
+        <div class="text-to-voice-wrapper">
+          <div class="left">
+                  <form>
+                    <textarea name="prompt" rows="1" cols="1" placeholder="Enter job description here..."></textarea>
+                    <div class="record-button">
+                      <button type="submit"> SEND PROMPT
+                       
+                    </div>
+                  </form>
           </div>
-        </form>
-      </div>
-</div>
-      <script type="module" src="script.js"></script>
+       
+                <script type="module" src="script.js"></script>
 
-<div class="right">
-      <div id="speech">
-        <h2 style="font-weight: 430; margin-bottom: 2px; font-size: 48px;">Speech-to-Text</h2>
-        <p></p>
-        <div id="transcription"></div>
-        <div id="response"></div>
-        <div id="buttons">
-          <button id="start-btn">RECORD</button>
-          <button id="stop-btn" onclick disabled>SUBMIT</button>
-        </div>
-      </div>
-      <script src="SpeechToText.js"></script>
-      </div>
+          <div style = "margin-top: -50px;" class ="right">
+                <div id="speech">
+                  <!-- <h2 style="font-weight: 430; margin-bottom: 2px; font-size: 48px;">Speech-to-Text</h2>
+                  <p></p> -->
+                  <textarea name="prompt" rows="1" cols="1" placeholder="Your recorded speech will show up here..." id="transcription"></textarea>
+                  <!-- <div id="transcription"></div> -->
+                  <div style="display: none;" id="response"></div>
+                  <div id="buttons">
+                    <button id="start-btn">RECORD SPEECH</button>
+                    <button id="stop-btn" onclick disabled>SUBMIT</button>
+                  </div>
+                </div>
+                <script src="SpeechToText.js"></script>
+            </div>
+            
+  </div>
+   
     </main>
     
 
