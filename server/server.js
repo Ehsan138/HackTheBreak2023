@@ -34,7 +34,6 @@ app.get('/', async (req, res) => {
 })
 
 // Create a route to handle the request
-
 app.post('/', async (req, res) => {
     try {
         // AI response
@@ -46,12 +45,35 @@ app.post('/', async (req, res) => {
             count++;
         } else {
             userResponse = req.body.userResponse
-            gptPrompt = `Please provide STAR feedback on my answer.This is the question:${question}. 
-            This is my answer${userResponse}`
-            // gptPrompt = `Please provide me another interview question except ${question}`
-            // question = botResponse
+            gptPrompt = `Please provide constructive feedback to my answer.\n This is the question: ${question} \n. 
+            This is my answer: ${userResponse}`
             count++;
         }
+        response = await openai.createCompletion({
+            model: "text-davinci-003",
+            prompt: gptPrompt, // The prompt is the text that the AI will use to generate a response.
+            temperature: 0, // Higher values means the model will take more risks. (0-1)
+            max_tokens: 3000, // The maximum number of tokens to generate in the completion. Most models have a context length of 2048 tokens (except for the newest models, which support 4096).
+            top_p: 1, // alternative to sampling with temperature, called nucleus sampling
+            frequency_penalty: 0.5, // Number between -2.0 and 2.0. Positive values penalize new tokens based on their existing frequency in the text so far, decreasing the model's likelihood to repeat the same line verbatim.
+            presence_penalty: 0, // Number between -2.0 and 2.0. Positive values penalize new tokens based on whether they appear in the text so far, increasing the model's likelihood to talk about new topics.
+        });
+        botResponse = response.data.choices[0].text;
+        // Send the response back to the client
+        res.status(200).send({
+            bot: response.data.choices[0].text,
+        });
+    } catch (error) {
+        console.error(error)
+        res.status(500).send(error || 'Something went wrong');
+    }
+
+})
+app.post('/next', async (req, res) => {
+    try {
+        question = botResponse;
+        gptPrompt = `Please provide me another interview question except ${question}`
+        // AI response
         response = await openai.createCompletion({
             model: "text-davinci-003",
             prompt: gptPrompt, // The prompt is the text that the AI will use to generate a response.
