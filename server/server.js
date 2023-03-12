@@ -26,7 +26,7 @@ app.get('/', async (req, res) => {
 })
 
 // Create a route to handle the request
-app.post('/jobDescription', async (req, res) => {
+app.post('/', async (req, res) => {
     try {
         const prompt = req.body.prompt;
         // AI response

@@ -2,16 +2,15 @@
 
 $(document).ready(function () {
   $('#speech').hide(); // hide the textbox
-
   $('.record-button').click(function () {
     $('#ai-ouput').hide(); // hide the textbox
     $('form').hide(); // hide the textbox
     $('#ai-ouput').prop('disabled', true); // disable the textbox
-    $('.output-textbox label').text('Job description submitted.'); // update the label text
-    $('#speech').show(); // hide the textbox
+    $('#speech').show();
 
   });
 })
+
 
 function darkMode() {
   let icon = document.querySelector(".mode-icon");
