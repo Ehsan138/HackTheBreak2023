@@ -16,15 +16,18 @@ $(document).ready(function () {
 function darkMode() {
   let icon = document.querySelector(".mode-icon");
   let linkText = document.querySelector(".link-text")
+  let image = document.querySelector("#logo-image")
 
   if (icon.textContent === "🌘") {
     icon.textContent = "☀️";
     linkText.textContent = "Light Mode"
     linkText.style.color = "white";
+    image.src = "assets/prepmelogo_white.png";
   } else {
     icon.textContent = "🌘";
     linkText.textContent = "Dark Mode";
     linkText.style.color = "black";
+    image.src = "assets/prepmelogo_black.png";
   }
 
   let body = document.querySelector("body");

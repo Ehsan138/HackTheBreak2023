@@ -21,8 +21,10 @@
   <div id="container">
     <nav class="navbar">
       <div>
-        <h1>PrepMe</h1>
+        <img src="assets/prepmelogo_black.png" id="logo-image" alt="Description of image"> 
+        <div id="title">PrepBot</div>
       </div>
+      
       <ul class="navbar-nav">
         <li>
           <a href="#" class="navbar-link" onclick="darkMode()">
@@ -35,21 +37,21 @@
     </nav>
 
     <main>
-      <h1>Hack the Break</h1>
+      <h1>Nail Your Next Interview!</h1>
 
       <div id="app">
         <p>
-          PrepMe can help you prepare for your upcoming interview by generating potential
+          PrepBot can help you prepare for your upcoming interview by generating potential
           interview questions based on the job posting you paste in the textbox. You can then record your audio response
           to each
-          question and submit it for evaluation. PrepMe will provide feedback on your performance, including areas where
+          question and submit it for evaluation. PrepBot will provide feedback on your performance, including areas where
           you can improve using STAR (<b>Situation</b>, <b>Task</b>, <b>Action</b>, and <b>Result</b>) format.
         </p>
         <br>
         <div id="chat_container"></div>
 
         <form>
-          <textarea name="prompt" rows="1" cols="1" placeholder="Ask PrepMe..."></textarea>
+          <textarea name="prompt" rows="1" cols="1" placeholder="Ask PrepBot..."></textarea>
           <div class="record-button">
             <button type="submit"> SUBMIT
               <button type="submit" id="next-question-button"> NEXT QUESTION
@@ -66,7 +68,7 @@
         <div id="response"></div>
         <div id="buttons">
           <button id="start-btn">RECORD</button>
-          <button id="stop-btn" onclick disabled>Submit</button>
+          <button id="stop-btn" onclick disabled>SUBMIT</button>
         </div>
       </div>
       <script src="SpeechToText.js"></script>
