@@ -18,56 +18,56 @@
 </head>
 
 <body>
-  <div id="container" >
-  <nav class="navbar">
-  <div>
-    <h1>PrepMe</h1>
-  </div>
-  <ul class="navbar-nav">
-    <li>
-      <a href="#" class="navbar-link" onclick="darkMode()">
-        <span class="mode-icon">🌘</span>
-        <span class="link-text">Dark Mode</span>
-      </a>
-    </li>
-    
-  </ul>
-</nav>
-
-  <main>
-    <h1>Hack the Break</h1>
-
-    <div id="app">
-      <div id="chat_container"></div>
-
-      <form>
-        <textarea name="prompt" rows="1" cols="1" placeholder="Ask PrepMe..."></textarea>
-        <div class="record-button">
-          <button type="submit"> SUBMIT 
-          <button type="submit"> NEXT QUESTION
-        </div>
-      </form>
-    </div>
-
-    <script type="module" src="script.js"></script>
-
-
-    <div id="speech">
-      <h1>Speech-to-Text</h1>
-      <div id="transcription"></div>
-      <div id="response"></div>
-      <div id="buttons">
-        <button id="start-btn">RECORD</button>
-        <button id="stop-btn" onclick disabled>Submit</button>
+  <div id="container">
+    <nav class="navbar">
+      <div>
+        <h1>PrepMe</h1>
       </div>
-    </div>
-    <script src="SpeechToText.js"></script>
-  </main>
+      <ul class="navbar-nav">
+        <li>
+          <a href="#" class="navbar-link" onclick="darkMode()">
+            <span class="mode-icon">🌘</span>
+            <span class="link-text">Dark Mode</span>
+          </a>
+        </li>
 
-  <footer>
-  <p>&copy; 2023 Made by Ankit Alwhat, Cadan Glass, Ehsan Emadi and Amir Eskandari for Hack the Break 2023</p>
-</footer>
-</div>
+      </ul>
+    </nav>
+
+    <main>
+      <h1>Hack the Break</h1>
+
+      <div id="app">
+        <div id="chat_container"></div>
+
+        <form>
+          <textarea name="prompt" rows="1" cols="1" placeholder="Ask PrepMe..."></textarea>
+          <div class="record-button">
+            <button type="submit"> SUBMIT
+              <button type="submit"> NEXT QUESTION
+          </div>
+        </form>
+      </div>
+
+      <script type="module" src="script.js"></script>
+
+
+      <div id="speech">
+        <h1>Speech-to-Text</h1>
+        <div id="transcription"></div>
+        <div id="response"></div>
+        <div id="buttons">
+          <button id="start-btn">RECORD</button>
+          <button id="stop-btn" onclick disabled>Submit</button>
+        </div>
+      </div>
+      <script src="SpeechToText.js"></script>
+    </main>
+
+    <footer>
+      <p>&copy; 2023 Made by Ankit Alwhat, Cadan Glass, Ehsan Emadi and Amir Eskandari for Hack the Break 2023</p>
+    </footer>
+  </div>
 </body>
 
 </html>
