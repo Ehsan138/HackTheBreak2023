@@ -5,6 +5,7 @@ const form = document.querySelector('form')
 const userResponse = document.querySelector('#response')
 const chatContainer = document.querySelector('#chat_container')
 const stopBtn = document.getElementById('stop-btn');
+const nextButton = document.querySelector('#next-question-button');
 
 
 
@@ -119,8 +120,62 @@ const handleSubmit = async (e) => {
     alert(err)
   }
 }
+const handleNext = async (e) => {
+  e.preventDefault()
+
+  const data = new FormData(form)
+
+  // user's chatstripe
+  // chatContainer.innerHTML += chatStripe(false, data.get('prompt'))
+
+  // to clear the textarea input 
+  form.reset()
+
+  // bot's chatstripe
+  const uniqueId = generateUniqueId()
+  chatContainer.innerHTML += chatStripe(true, " ", uniqueId)
+
+  // to focus scroll to the bottom 
+  chatContainer.scrollTop = chatContainer.scrollHeight;
+
+  // specific message div 
+  const messageDiv = document.getElementById(uniqueId)
+
+  // messageDiv.innerHTML = "..."
+  loader(messageDiv)
+
+  // fetch data from server -> bots response
+  let response = await fetch('http://localhost:5000/next', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      prompt: data.get('prompt'),
+      userResponse: userResponse.textContent
+    })
+  })
+
+  clearInterval(loadInterval)
+  messageDiv.innerHTML = " "
+
+  if (response.ok) {
+    const data = await response.json();
+    const parsedData = data.bot.trim() // trims any trailing spaces/'\n' 
+
+    typeText(messageDiv, parsedData)
+  } else {
+    const err = await response.text()
+
+    messageDiv.innerHTML = "Something went wrong"
+    alert(err)
+  }
+}
 
 form.addEventListener('submit', handleSubmit)
+nextButton.addEventListener('click', handleNext);
+
+
 stopBtn.addEventListener('click', handleSubmit)
 
 
