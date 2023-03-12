@@ -32,7 +32,8 @@ app.post('/', async (req, res) => {
         // AI response
         const response = await openai.createCompletion({
             model: "text-davinci-003",
-            prompt: `You are a job interviewer for a software development company. Create interview questions for the following job description: ${prompt}`, // The prompt is the text that the AI will use to generate a response.
+            prompt: `You are a job interviewer for a software development company. 
+            Create one interview questions for the following job description: ${prompt}`, // The prompt is the text that the AI will use to generate a response.
             temperature: 0, // Higher values means the model will take more risks. (0-1)
             max_tokens: 3000, // The maximum number of tokens to generate in the completion. Most models have a context length of 2048 tokens (except for the newest models, which support 4096).
             top_p: 1, // alternative to sampling with temperature, called nucleus sampling
@@ -53,11 +54,12 @@ app.post('/', async (req, res) => {
 // Create a route to handle the request
 app.post('/interviewQuestion', async (req, res) => {
     try {
-        const prompt = req.body.prompt;
+        const prompt = req.body.response;
         // AI response
         const response = await openai.createCompletion({
             model: "text-davinci-003",
-            prompt: `You are a job interviewer in an interview. You just asked the following question ${question}. The interviewee responded with ${prompt}. Grade their response out of 100 and create a bullet form list of ways their response could be improved upon using STAR format.`, // The prompt is the text that the AI will use to generate a response.
+            prompt: `You are a job interviewer in an interview. You just asked the following question ${question}. The interviewee responded with ${prompt}.
+             Grade their response out of 100 and create a bullet form list of ways their response could be improved upon using STAR format. Then can you give me another interview question.`, // The prompt is the text that the AI will use to generate a response.
             temperature: 0, // Higher values means the model will take more risks. (0-1)
             max_tokens: 3000, // The maximum number of tokens to generate in the completion. Most models have a context length of 2048 tokens (except for the newest models, which support 4096).
             top_p: 1, // alternative to sampling with temperature, called nucleus sampling

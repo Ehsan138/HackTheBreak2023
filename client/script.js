@@ -60,7 +60,9 @@ function chatStripe(isAi, value, uniqueId) {
         </div>
     `
   )
+
 }
+
 
 const handleSubmit = async (e) => {
   e.preventDefault()
@@ -68,7 +70,7 @@ const handleSubmit = async (e) => {
   const data = new FormData(form)
 
   // user's chatstripe
-  chatContainer.innerHTML += chatStripe(false, data.get('prompt'))
+  // chatContainer.innerHTML += chatStripe(false, data.get('prompt'))
 
   // to clear the textarea input 
   form.reset()

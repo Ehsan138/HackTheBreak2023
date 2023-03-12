@@ -7,7 +7,6 @@ $(document).ready(function () {
     $('form').hide(); // hide the textbox
     $('#ai-ouput').prop('disabled', true); // disable the textbox
     $('#speech').show();
-
   });
 })
 
