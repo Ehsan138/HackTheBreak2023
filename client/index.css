@@ -1,8 +1,7 @@
 /* Font */
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
-
 
 /* Navbar */
 .navbar {
@@ -46,7 +45,7 @@ main {
   flex-direction: column;
   align-items: center;
   padding: 50px;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 h1 {
@@ -70,7 +69,7 @@ h1 {
   overflow-y: auto;
   margin-bottom: 20px;
   padding: 10px;
-   box-shadow: rgb(0 0 0 / 10%) 0px 2px 4px 0px, rgb(0 0 0 / 5%) 0px 1px 2px 0px;
+  box-shadow: rgb(0 0 0 / 10%) 0px 2px 4px 0px, rgb(0 0 0 / 5%) 0px 1px 2px 0px;
 }
 
 form {
@@ -86,7 +85,7 @@ textarea {
   border: 1px solid #ccc;
   margin-bottom: 20px;
   resize: none;
-   box-shadow: rgb(0 0 0 / 10%) 0px 2px 4px 0px, rgb(0 0 0 / 5%) 0px 1px 2px 0px;
+  box-shadow: rgb(0 0 0 / 10%) 0px 2px 4px 0px, rgb(0 0 0 / 5%) 0px 1px 2px 0px;
 }
 
 .record-button {
@@ -98,15 +97,14 @@ textarea {
 button[type="submit"] {
   padding: 10px 20px;
   border: none;
-  background-color: #2B547E;
+  background-color: #2b547e;
   color: #fff;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-  
 }
 
 button[type="submit"]:hover {
-  background-color: #ADD8E6;
+  background-color: #add8e6;
   color: #333;
 }
 
@@ -135,7 +133,7 @@ button[type="submit"]:hover {
 button {
   padding: 10px 20px;
   border: none;
-  background-color: #2B547E;
+  background-color: #2b547e;
   color: #fff;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
@@ -143,7 +141,7 @@ button {
 }
 
 button:hover {
-  background-color: #ADD8E6;
+  background-color: #add8e6;
   color: #333;
 }
 
@@ -153,3 +151,15 @@ button[disabled] {
   cursor: default;
 }
 
+footer {
+  background-color: #f2f2f2;
+  text-align: center;
+  padding: 10px;
+  font-size: 16px;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
