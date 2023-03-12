@@ -16,7 +16,7 @@ startBtn.addEventListener('click', function () {
 stopBtn.addEventListener('click', function () {
   recognition.stop();
   startBtn.disabled = false;
-  // stopBtn.disabled = true;
+  stopBtn.disabled = true;
   responseDiv.textContent = response;
 });
 recognition.onresult = function (event) {
