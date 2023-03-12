@@ -126,7 +126,7 @@ stopBtn.addEventListener('click', handleSubmit)
 
 // to handle enter key press to submit form
 form.addEventListener('keyup', (e) => {
-  if (e.keyCode === 13) {
+  if (e.keyCode === 13 && !evt.shiftKey) {
     handleSubmit(e)
   }
 })
