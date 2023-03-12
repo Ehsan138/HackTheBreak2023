@@ -1,7 +1,6 @@
 /* Font */
 body {
   font-family: "Poppins", sans-serif;
-
 }
 
 /* Navbar */
@@ -44,15 +43,17 @@ body {
 }
 
 /* Main */
-body{
+body {
   min-height: 100vh;
 }
 main {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   align-items: center;
   padding: 50px;
   /* min-height: 100vh; */
+  gap: 5rem;
+  justify-content: center;
 }
 
 h1 {
@@ -71,12 +72,37 @@ h1 {
 
 #chat_container {
   width: 100%;
-  height: 300px;
+  height: 35rem;
   border: 1px solid #ccc;
   overflow-y: auto;
   margin-bottom: 20px;
   padding: 10px;
   box-shadow: rgb(0 0 0 / 10%) 0px 2px 4px 0px, rgb(0 0 0 / 5%) 0px 1px 2px 0px;
+  width: 40rem;
+  border-radius: 20px;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  background: none;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 form {
@@ -87,11 +113,13 @@ form {
 }
 
 textarea {
-  width: 100%;
+  width: 40rem;
   padding: 10px;
   border: 1px solid #ccc;
   margin-bottom: 20px;
   resize: none;
+  height: 5rem;
+  border-radius: 20px;
   box-shadow: rgb(0 0 0 / 10%) 0px 2px 4px 0px, rgb(0 0 0 / 5%) 0px 1px 2px 0px;
 }
 
@@ -172,7 +200,7 @@ footer {
   width: 100%;
 }
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -180,12 +208,11 @@ footer {
 
 #logo-image {
   width: 5rem;
- 
 }
 
 #title {
   display: inline;
   font-size: 3rem;
   font-weight: 600;
-  
+  color: #2b547e;
 }
