@@ -7,7 +7,9 @@ let count = 0;
 let gptPrompt;
 let question;
 let prompt;
-let userResponse
+let userResponse;
+let response = null;
+let botResponse;
 
 dotenv.config()
 console.log(process.env.OPENAI_API_KEY)
@@ -44,11 +46,13 @@ app.post('/', async (req, res) => {
             count++;
         } else {
             userResponse = req.body.userResponse
-            gptPrompt = `Repeat this ${userResponse}`
-            question = prompt
+            gptPrompt = `Please provide STAR feedback on my answer.This is the question:${question}. 
+            This is my answer${userResponse}`
+            // gptPrompt = `Please provide me another interview question except ${question}`
+            // question = botResponse
             count++;
         }
-        let response = await openai.createCompletion({
+        response = await openai.createCompletion({
             model: "text-davinci-003",
             prompt: gptPrompt, // The prompt is the text that the AI will use to generate a response.
             temperature: 0, // Higher values means the model will take more risks. (0-1)
@@ -57,15 +61,16 @@ app.post('/', async (req, res) => {
             frequency_penalty: 0.5, // Number between -2.0 and 2.0. Positive values penalize new tokens based on their existing frequency in the text so far, decreasing the model's likelihood to repeat the same line verbatim.
             presence_penalty: 0, // Number between -2.0 and 2.0. Positive values penalize new tokens based on whether they appear in the text so far, increasing the model's likelihood to talk about new topics.
         });
+        botResponse = response.data.choices[0].text;
         // Send the response back to the client
         res.status(200).send({
-            bot: response.data.choices[0].text
+            bot: response.data.choices[0].text,
         });
-
     } catch (error) {
         console.error(error)
         res.status(500).send(error || 'Something went wrong');
     }
+
 })
 
 
