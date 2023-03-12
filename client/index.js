@@ -25,7 +25,7 @@ function darkMode() {
     linkText.textContent = "Dark Mode";
   }
 
-  let main = document.querySelector("main");
-  main.classList.toggle("dark-mode");
+  let body = document.querySelector("body");
+  body.classList.toggle("dark-mode");
   console.log("clicked")
 }
