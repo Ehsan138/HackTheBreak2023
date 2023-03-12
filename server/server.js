@@ -7,6 +7,7 @@ let count = 0;
 let gptPrompt;
 let question;
 let prompt;
+let userResponse
 
 dotenv.config()
 console.log(process.env.OPENAI_API_KEY)
@@ -39,9 +40,13 @@ app.post('/', async (req, res) => {
             prompt = req.body.prompt;
             gptPrompt = `You are a job interviewer for a software development company. 
             Create one interview questions for the following job description: ${prompt}`
+            question = prompt
+            count++;
         } else {
-            prompt = req.body.userResponse
-            gptPrompt = `Repeat this ${prompt}`
+            userResponse = req.body.userResponse
+            gptPrompt = `Repeat this ${userResponse}`
+            question = prompt
+            count++;
         }
         let response = await openai.createCompletion({
             model: "text-davinci-003",
@@ -52,8 +57,6 @@ app.post('/', async (req, res) => {
             frequency_penalty: 0.5, // Number between -2.0 and 2.0. Positive values penalize new tokens based on their existing frequency in the text so far, decreasing the model's likelihood to repeat the same line verbatim.
             presence_penalty: 0, // Number between -2.0 and 2.0. Positive values penalize new tokens based on whether they appear in the text so far, increasing the model's likelihood to talk about new topics.
         });
-        question = prompt
-        count++;
         // Send the response back to the client
         res.status(200).send({
             bot: response.data.choices[0].text

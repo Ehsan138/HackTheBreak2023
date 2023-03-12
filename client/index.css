@@ -28,6 +28,7 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background-color: #164a41;
 }
+
 main {
   margin-left: 5rem;
   padding: 1rem;
