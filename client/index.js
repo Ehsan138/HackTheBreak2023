@@ -20,9 +20,11 @@ function darkMode() {
   if (icon.textContent === "🌘") {
     icon.textContent = "☀️";
     linkText.textContent = "Light Mode"
+    linkText.style.color = "white";
   } else {
     icon.textContent = "🌘";
     linkText.textContent = "Dark Mode";
+    linkText.style.color = "black";
   }
 
   let body = document.querySelector("body");
