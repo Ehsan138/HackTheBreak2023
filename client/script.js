@@ -119,4 +119,7 @@ form.addEventListener('keyup', (e) => {
   if (e.keyCode === 13) {
     handleSubmit(e)
   }
+  if (evt.keyCode == 13 && !evt.shiftKey) {
+    form.submit();
+  }
 })
