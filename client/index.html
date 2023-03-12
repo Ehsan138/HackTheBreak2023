@@ -18,6 +18,7 @@
 </head>
 
 <body>
+  <div id="container" >
   <nav class="navbar">
   <div>
     <h1>PrepMe</h1>
@@ -29,12 +30,7 @@
         <span class="link-text">Dark Mode</span>
       </a>
     </li>
-    <li>
-      <a href="#" class="navbar-link">
-        📖
-        <span class="link-text">About</span>
-      </a>
-    </li>
+    
   </ul>
 </nav>
 
@@ -48,6 +44,7 @@
         <textarea name="prompt" rows="1" cols="1" placeholder="Ask PrepMe..."></textarea>
         <div class="record-button">
           <button type="submit"> SUBMIT 
+          <button type="submit"> NEXT QUESTION
         </div>
       </form>
     </div>
@@ -61,11 +58,16 @@
       <div id="response"></div>
       <div id="buttons">
         <button id="start-btn">RECORD</button>
-        <button id="stop-btn" oncl disabled>Submit</button>
+        <button id="stop-btn" onclick disabled>Submit</button>
       </div>
     </div>
     <script src="SpeechToText.js"></script>
   </main>
+
+  <footer>
+  <p>&copy; 2023 Made by Ankit Alwhat, Cadan Glass, Ehsan Emadi and Amir Eskandari for Hack the Break 2023</p>
+</footer>
+</div>
 </body>
 
 </html>
