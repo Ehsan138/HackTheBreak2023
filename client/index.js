@@ -4,11 +4,13 @@ $(document).ready(function () {
   $('#speech').hide(); // hide the textbox
   $('.record-button').click(function () {
     $('#ai-ouput').hide(); // hide the textbox
-    $('form').hide(); // hide the textbox
+    $('#job-Description').hide(); // hide the textbox
     $('#ai-ouput').prop('disabled', true); // disable the textbox
     $('#speech').show();
   });
+
 })
+
 
 
 function darkMode() {

@@ -13,7 +13,7 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
   <script src="index.js"></script>
-
+  <script type="module" src="script.js"></script>
 
 </head>
 
@@ -46,25 +46,27 @@
       <div id="chat_container"></div>
 
       <form>
-        <textarea name="prompt" rows="1" cols="1" placeholder="Ask PrepMe..."></textarea>
-        <div class="record-button">
-          <button type="submit"> SUBMIT
+        <div id="job-Description">
+          <textarea name="prompt" rows="1" cols="1" placeholder="Enter Job Description..."></textarea>
+          <div class="record-button">
+            <button type="submit"> SUBMIT
+          </div>
         </div>
       </form>
     </div>
 
-    <script type="module" src="script.js"></script>
 
 
     <div id="speech">
       <h1>Speech-to-Text</h1>
       <div id="transcription"></div>
       <div id="response"></div>
-      <div id="buttons">
+      <div id="buttons" class="record-button">
         <button id="start-btn">RECORD</button>
-        <button id="stop-btn" disabled>Submit</button>
+        <button id="stop-btn" type="submit">Submit</button>
       </div>
     </div>
+
     <script src="SpeechToText.js"></script>
   </main>
 </body>

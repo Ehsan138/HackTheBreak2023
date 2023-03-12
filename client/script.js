@@ -2,7 +2,11 @@ import bot from './assets/bot.svg'
 import user from './assets/user.svg'
 
 const form = document.querySelector('form')
+const userResponse = document.querySelector('#response')
 const chatContainer = document.querySelector('#chat_container')
+const stopBtn = document.getElementById('stop-btn');
+
+
 
 let loadInterval
 
@@ -95,7 +99,8 @@ const handleSubmit = async (e) => {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      prompt: data.get('prompt')
+      prompt: data.get('prompt'),
+      userResponse: userResponse.textContent
     })
   })
 
@@ -116,6 +121,9 @@ const handleSubmit = async (e) => {
 }
 
 form.addEventListener('submit', handleSubmit)
+stopBtn.addEventListener('click', handleSubmit)
+
+
 // to handle enter key press to submit form
 form.addEventListener('keyup', (e) => {
   if (e.keyCode === 13) {
