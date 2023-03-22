@@ -115,8 +115,7 @@ const handleSubmit = async (e) => {
   loader(messageDiv);
 
   // fetch data from server -> bots response
-  // const response = await fetch("http://localhost:5000", {
-  const response = await fetch("https://ai-interview-bot-f1dda.web.app/", {
+  const response = await fetch("http://localhost:5000", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -167,9 +166,7 @@ const handleNext = async (e) => {
   loader(messageDiv);
 
   // fetch data from server -> bots response
-  // let response = await fetch("http://localhost:5000/next", {
-  let response = await fetch("https://ai-interview-bot-f1dda.web.app/next", {
-
+  let response = await fetch("http://localhost:5000/next", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
